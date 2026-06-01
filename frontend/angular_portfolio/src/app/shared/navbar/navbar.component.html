@@ -1,0 +1,137 @@
+<nav class="navbar navbar-expand-lg fixed-top custom-navbar"
+     [class.shrink]="isScrolled">
+
+    <div class="container">
+
+        <!-- LOGO -->
+        <a class="navbar-brand brand-logo" routerLink="/">
+
+            Papa Mbaye CISSE
+
+            <span>
+                Alias Obama
+            </span>
+
+        </a>
+
+        <!-- TOGGLER MOBILE -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <!-- MENU -->
+        <div class="collapse navbar-collapse" id="navMenu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-3">
+
+                <!-- ACCUEIL -->
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link nav-anim"
+                        routerLink="/"
+                        routerLinkActive="active-link"
+                        [routerLinkActiveOptions]="{ exact: true }">
+
+                        Accueil
+
+                    </a>
+
+                </li>
+
+                <!-- ABOUT -->
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link nav-anim"
+                        routerLink="/about"
+                        routerLinkActive="active-link">
+
+                        À propos
+
+                    </a>
+
+                </li>
+
+                <!-- SKILLS -->
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link nav-anim"
+                        routerLink="/skills"
+                        routerLinkActive="active-link">
+
+                        Compétences
+
+                    </a>
+
+                </li>
+
+                <!-- PROJECTS -->
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link nav-anim"
+                        routerLink="/projects"
+                        routerLinkActive="active-link">
+
+                        Projets
+
+                    </a>
+
+                </li>
+
+                <!-- EXPERIENCE -->
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link nav-anim"
+                        routerLink="/experience"
+                        routerLinkActive="active-link">
+
+                        Expérience
+
+                    </a>
+
+                </li>
+
+                <!-- CONTACT -->
+                <li class="nav-item ms-lg-2">
+
+                    <a
+                        class="btn btn-premium"
+                        routerLink="/contact">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+                <!-- CV -->
+                <li class="nav-item">
+
+                    <a
+                        class="btn btn-cv"
+                        href="assets/cv/Papa_Mbaye_CISSE_CV.pdf"
+                        download="Papa_Mbaye_CISSE_CV.pdf">
+
+                        Télécharger CV
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>

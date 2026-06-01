@@ -1,0 +1,227 @@
+<section class="contact-section">
+
+    <!-- BACKGROUND -->
+    <div class="contact-bg"></div>
+    <div class="overlay"></div>
+
+    <!-- BLURS -->
+    <div class="blur blur-1"></div>
+    <div class="blur blur-2"></div>
+
+    <div class="container position-relative">
+
+        <!-- HEADER -->
+        <div class="text-center mb-5">
+
+            <span class="contact-badge">
+                Contact Professionnel
+            </span>
+
+            <h2 class="contact-title">
+                Discutons de votre
+                prochain projet digital
+            </h2>
+
+            <p class="contact-subtitle">
+                Développeur Web & Mobile spécialisé en Angular,
+                Django, API REST et Flutter.
+            </p>
+
+        </div>
+
+        <div class="row g-5 align-items-stretch">
+
+            <!-- CONTACT INFOS -->
+            <div class="col-lg-4" data-aos="fade-right">
+
+                <div class="contact-info-box">
+
+                    <h3 class="info-title">
+                        Informations de contact
+                    </h3>
+
+                    <p class="info-text">
+                        Disponible pour vos projets web,
+                        mobiles et solutions digitales modernes.
+                    </p>
+
+                    <!-- EMAIL -->
+                    <div class="info-card">
+
+                        <div class="icon-box">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+
+                        <div>
+                            <span>Email</span>
+                            <h6>pmctech787@gmail.com</h6>
+                        </div>
+
+                    </div>
+
+                    <!-- PHONE -->
+                    <div class="info-card">
+
+                        <div class="icon-box">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+
+                        <div>
+                            <span>Téléphone</span>
+                            <h6>+221 77 547 00 87</h6>
+                        </div>
+
+                    </div>
+
+                    <!-- ADDRESS -->
+                    <div class="info-card">
+
+                        <div class="icon-box">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+
+                        <div>
+                            <span>Adresse</span>
+                            <h6>Medina rue 35 X 28 Dakar, Sénégal</h6>
+                        </div>
+
+                    </div>
+
+                    <!-- SOCIAL -->
+                    <div class="social-links">
+
+    <!-- TIKTOK -->
+    <a href="https://www.tiktok.com/@ndeye.astou.kane50"
+       target="_blank">
+
+        <i class="bi bi-tiktok"></i>
+
+    </a>
+
+    <!-- INSTAGRAM -->
+    <a href="https://www.instagram.com/papambayecisse?igsh=OXJqNXpuaTh3cGNr&utm_source=qr"
+       target="_blank">
+
+        <i class="bi bi-instagram"></i>
+
+    </a>
+
+    <!-- FACEBOOK -->
+    <a href="https://www.facebook.com/share/1D2LCbr65N/?mibextid=wwXIfr"
+       target="_blank">
+
+        <i class="bi bi-facebook"></i>
+
+    </a>
+
+</div>
+
+                </div>
+
+            </div>
+
+            <!-- FORM -->
+            <div class="col-lg-8" data-aos="fade-left">
+
+                <form class="contact-form" (ngSubmit)="send()">
+
+                    <div class="row g-4">
+
+                        <!-- NAME -->
+                        <div class="col-md-6">
+
+                            <div class="input-box">
+
+                                <label>Nom complet</label>
+
+                                <input
+                                    type="text"
+                                    [(ngModel)]="form.name"
+                                    name="name"
+                                    class="form-control"
+                                    placeholder="Votre nom"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="col-md-6">
+
+                            <div class="input-box">
+
+                                <label>Email</label>
+
+                                <input
+                                    type="email"
+                                    [(ngModel)]="form.email"
+                                    name="email"
+                                    class="form-control"
+                                    placeholder="Votre email"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+                        <!-- SUBJECT -->
+                        <div class="col-12">
+
+                            <div class="input-box">
+
+                                <label>Sujet</label>
+
+                                <input
+                                    type="text"
+                                    [(ngModel)]="form.subject"
+                                    name="subject"
+                                    class="form-control"
+                                    placeholder="Sujet du message">
+
+                            </div>
+
+                        </div>
+
+                        <!-- MESSAGE -->
+                        <div class="col-12">
+
+                            <div class="input-box">
+
+                                <label>Message</label>
+
+                                <textarea
+                                    rows="6"
+                                    [(ngModel)]="form.message"
+                                    name="message"
+                                    class="form-control"
+                                    placeholder="Votre message..."
+                                    required></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- BUTTON -->
+                    <div class="mt-4">
+
+                        <button type="submit" class="btn-submit">
+
+                            <i class="bi bi-send-fill"></i>
+                            Envoyer le message
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
