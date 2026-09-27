@@ -12,12 +12,13 @@ import { RouterModule } from '@angular/router';
 export class NavbarComponent {
 
   isScrolled = false;
+  
+  // Ajout de la variable manquante pour le menu mobile
+  menuOpen = false;
 
   @HostListener('window:scroll', [])
   onScroll(){
-
     this.isScrolled = window.scrollY > 50;
-
   }
 
 }
