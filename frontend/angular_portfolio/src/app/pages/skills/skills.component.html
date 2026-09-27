@@ -1,146 +1,315 @@
-<section class="skills-section">
+<section class="skills-section py-5">
+  <div class="container">
 
-    <div class="container">
-
-        <!-- TITRE -->
-        <div class="text-center mb-5">
-
-            <h2 class="section-title">
-                Mes Compétences
-            </h2>
-
-            <p class="section-subtitle">
-                Technologies et outils que j’utilise pour développer
-                des applications modernes et performantes.
-            </p>
-
-        </div>
-
-        <!-- GRID -->
-        <div class="row g-4">
-
-            <!-- CARD -->
-            <div class="col-md-6 col-lg-4">
-
-                <div class="skill-card">
-
-                    <div class="icon">
-                        <i class="fab fa-angular"></i>
-                    </div>
-
-                    <h4>Angular</h4>
-
-                    <p>
-                        Développement SPA modernes, standalone components,
-                        routing avancé et interfaces premium.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- CARD -->
-            <div class="col-md-6 col-lg-4" data-aos="fade-up">
-
-                <div class="skill-card">
-
-                    <div class="icon">
-                        <i class="fab fa-python"></i>
-                    </div>
-
-                    <h4>Django</h4>
-
-                    <p>
-                        Backend robuste, API REST, sécurité,
-                        authentification et dashboards administratifs.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- CARD -->
-            <div class="col-md-6 col-lg-4">
-
-                <div class="skill-card">
-
-                    <div class="icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-
-                    <h4>Mobile</h4>
-
-                    <p>
-                        Applications responsives et solutions mobiles
-                        modernes adaptées aux entreprises.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- CARD -->
-            <div class="col-md-6 col-lg-4">
-
-                <div class="skill-card">
-
-                    <div class="icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-
-                    <h4>API REST</h4>
-
-                    <p>
-                        Création et intégration d’API performantes
-                        avec architecture scalable.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- CARD -->
-            <div class="col-md-6 col-lg-4">
-
-                <div class="skill-card">
-
-                    <div class="icon">
-                        <i class="fab fa-bootstrap"></i>
-                    </div>
-
-                    <h4>UI/UX</h4>
-
-                    <p>
-                        Interfaces modernes, responsive design
-                        et expériences utilisateurs premium.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- CARD -->
-            <div class="col-md-6 col-lg-4">
-
-                <div class="skill-card">
-
-                    <div class="icon">
-                        <i class="fab fa-git-alt"></i>
-                    </div>
-
-                    <h4>Git & GitHub</h4>
-
-                    <p>
-                        Gestion de versions, workflows professionnels
-                        et déploiement collaboratif.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
+    <!-- TITRE -->
+    <div class="text-center mb-5">
+      <h2 class="section-title">Mes Compétences</h2>
+      <p class="section-subtitle">
+        Technologies et outils que j’utilise pour développer des applications modernes et performantes.
+      </p>
     </div>
 
+    <!-- FILTRES -->
+    <div class="skills-filters text-center mb-5">
+      <button class="filter-btn active" data-filter="all">Toutes</button>
+      <button class="filter-btn" data-filter="frontend">Frontend</button>
+      <button class="filter-btn" data-filter="backend">Backend</button>
+      <button class="filter-btn" data-filter="database">Bases de données</button>
+      <button class="filter-btn" data-filter="tools">Outils</button>
+    </div>
+
+    <!-- GRID DES COMPÉTENCES -->
+    <div class="row g-4" id="skills-grid">
+
+      <!-- ==================== FRONTEND ==================== -->
+
+      <!-- React -->
+      <div class="col-md-6 col-lg-4 skill-item" data-category="frontend">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="icon"><i class="fab fa-react"></i></div>
+            <div>
+              <h4>React</h4>
+              <span class="badge-category">Frontend</span>
+            </div>
+          </div>
+          <p>Interfaces dynamiques, composants réutilisables et applications SPA performantes.</p>
+          <div class="skill-level">
+            <div class="progress">
+              <div class="progress-bar" style="width: 90%"></div>
+            </div>
+            <span>90%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- React Native -->
+      <div class="col-md-6 col-lg-4 skill-item" data-category="frontend">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="icon"><i class="fab fa-react"></i></div>
+            <div>
+              <h4>React Native</h4>
+              <span class="badge-category">Mobile</span>
+            </div>
+          </div>
+          <p>Applications mobiles multiplateformes (iOS & Android) avec une expérience native.</p>
+          <div class="skill-level">
+            <div class="progress">
+              <div class="progress-bar" style="width: 80%"></div>
+            </div>
+            <span>80%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Angular -->
+      <div class="col-md-6 col-lg-4 skill-item" data-category="frontend">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="icon"><i class="fab fa-angular"></i></div>
+            <div>
+              <h4>Angular</h4>
+              <span class="badge-category">Frontend</span>
+            </div>
+          </div>
+          <p>SPA modernes, standalone components, routing avancé et interfaces premium.</p>
+          <div class="skill-level">
+            <div class="progress">
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+            <span>85%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- HTML / CSS / JS -->
+      <div class="col-md-6 col-lg-4 skill-item" data-category="frontend">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="icon"><i class="fab fa-html5"></i></div>
+            <div>
+              <h4>HTML / CSS / JS</h4>
+              <span class="badge-category">Frontend</span>
+            </div>
+          </div>
+          <p>Fondations solides du web : structure sémantique, styles modernes et interactivité.</p>
+          <div class="skill-level">
+            <div class="progress">
+              <div class="progress-bar" style="width: 95%"></div>
+            </div>
+            <span>95%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tailwind CSS -->
+      <div class="col-md-6 col-lg-4 skill-item" data-category="frontend">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="icon"><i class="fas fa-wind"></i></div>
+            <div>
+              <h4>Tailwind CSS</h4>
+              <span class="badge-category">UI</span>
+            </div>
+          </div>
+          <p>Design system utility-first pour créer rapidement des interfaces modernes.</p>
+          <div class="skill-level">
+            <div class="progress">
+              <div class="progress-bar" style="width: 88%"></div>
+            </div>
+            <span>88%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flutter -->
+      <div class="col-md-6 col-lg-4 skill-item" data-category="frontend">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="icon"><i class="fab fa-google"></i></div>
+            <div>
+              <h4>Flutter</h4>
+              <span class="badge-category">Mobile</span>
+            </div>
+          </div>
+          <p>Applications multiplateformes avec une UI fluide et performante.</p>
+          <div class="skill-level">
+            <div class="progress">
+              <div class="progress-bar" style="width: 75%"></div>
+            </div>
+            <span>75%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== BACKEND ==================== -->
+
+      <!-- Node.js -->
+      <div class="col-md-6 col-lg-4 skill-item" data-category="backend">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="icon"><i class="fab fa-node-js"></i></div>
+            <div>
+              <h4>Node.js</h4>
+              <span class="badge-category">Backend</span>
+            </div>
+          </div>
+          <p>Backend JavaScript performant, APIs REST et applications temps réel.</p>
+          <div class="skill-level">
+            <div class="progress">
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+            <span>85%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spring Boot -->
+      <div class="col-md-6 col-lg-4 skill-item" data-category="backend">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="icon"><i class="fas fa-leaf"></i></div>
+            <div>
+              <h4>Spring Boot</h4>
+              <span class="badge-category">Backend</span>
+            </div>
+          </div>
+          <p>Applications Java robustes, microservices, sécurité et APIs scalables.</p>
+          <div class="skill-level">
+            <div class="progress">
+              <div class="progress-bar" style="width: 80%"></div>
+            </div>
+            <span>80%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Python / Django -->
+      <div class="col-md-6 col-lg-4 skill-item" data-category="backend">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="icon"><i class="fab fa-python"></i></div>
+            <div>
+              <h4>Python & Django</h4>
+              <span class="badge-category">Backend</span>
+            </div>
+          </div>
+          <p>Backend robuste, API REST, sécurité et dashboards administratifs.</p>
+          <div class="skill-level">
+            <div class="progress">
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+            <span>85%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- API REST -->
+      <div class="col-md-6 col-lg-4 skill-item" data-category="backend">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+            <div>
+              <h4>API REST</h4>
+              <span class="badge-category">Backend</span>
+            </div>
+          </div>
+          <p>Création et intégration d’API performantes avec architecture scalable.</p>
+          <div class="skill-level">
+            <div class="progress">
+              <div class="progress-bar" style="width: 90%"></div>
+            </div>
+            <span>90%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== BASES DE DONNÉES ==================== -->
+
+      <!-- PostgreSQL -->
+      <div class="col-md-6 col-lg-4 skill-item" data-category="database">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="icon"><i class="fas fa-database"></i></div>
+            <div>
+              <h4>PostgreSQL</h4>
+              <span class="badge-category">Database</span>
+            </div>
+          </div>
+          <p>Base de données relationnelle puissante et adaptée aux applications complexes.</p>
+          <div class="skill-level">
+            <div class="progress">
+              <div class="progress-bar" style="width: 85%"></div>
+            </div>
+            <span>85%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Firebase -->
+      <div class="col-md-6 col-lg-4 skill-item" data-category="database">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="icon"><i class="fas fa-fire"></i></div>
+            <div>
+              <h4>Firebase</h4>
+              <span class="badge-category">BaaS</span>
+            </div>
+          </div>
+          <p>Authentification, base temps réel, stockage et cloud functions.</p>
+          <div class="skill-level">
+            <div class="progress">
+              <div class="progress-bar" style="width: 80%"></div>
+            </div>
+            <span>80%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supabase -->
+      <div class="col-md-6 col-lg-4 skill-item" data-category="database">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="icon"><i class="fas fa-bolt"></i></div>
+            <div>
+              <h4>Supabase</h4>
+              <span class="badge-category">BaaS</span>
+            </div>
+          </div>
+          <p>Alternative open-source à Firebase avec PostgreSQL et APIs automatiques.</p>
+          <div class="skill-level">
+            <div class="progress">
+              <div class="progress-bar" style="width: 78%"></div>
+            </div>
+            <span>78%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== OUTILS ==================== -->
+
+      <!-- Git & GitHub -->
+      <div class="col-md-6 col-lg-4 skill-item" data-category="tools">
+        <div class="skill-card">
+          <div class="skill-header">
+            <div class="icon"><i class="fab fa-git-alt"></i></div>
+            <div>
+              <h4>Git & GitHub</h4>
+              <span class="badge-category">Outils</span>
+            </div>
+          </div>
+          <p>Gestion de versions, workflows professionnels et déploiement collaboratif.</p>
+          <div class="skill-level">
+            <div class="progress">
+              <div class="progress-bar" style="width: 92%"></div>
+            </div>
+            <span>92%</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
+

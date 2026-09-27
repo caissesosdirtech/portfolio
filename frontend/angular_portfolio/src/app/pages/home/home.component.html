@@ -1,154 +1,117 @@
-<section class="ultra-hero-section">
+<section class="ultra-hero">
+  <!-- Background layers -->
+  <div class="hero-bg">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
 
-    <!-- BACKGROUND -->
-    <div class="hero-gradient"></div>
-    <div class="hero-grid"></div>
-
-    <!-- FLOATING BLURS -->
-    <div class="blur blur-one"></div>
-    <div class="blur blur-two"></div>
-    <div class="blur blur-three"></div>
-
-    <!-- FLOATING ELEMENTS -->
-    <div class="floating-icon icon-one">
-        <i class="bi bi-code-slash"></i>
-    </div>
-
-    <div class="floating-icon icon-two">
-        <i class="bi bi-phone"></i>
-    </div>
-
-    <div class="floating-icon icon-three">
-        <i class="bi bi-server"></i>
-    </div>
-
-    <div class="container">
-
-        <div class="row align-items-center min-vh-100">
-
-            <!-- LEFT CONTENT -->
-            <div class="col-lg-7 hero-content" data-aos="fade-right">
-
-                <span class="premium-badge">
-                    ✦ Développeur Fullstack Web & Mobile
-                </span>
-
-                <h1 class="ultra-title">
-
-                    Je transforme vos idées en
-                    <span>expériences digitales</span>
-                    modernes & premium.
-
-                </h1>
-
-                <p class="ultra-subtitle">
-
-                    Expert en Angular, Django, API REST et Flutter,
-                    je conçois des applications web & mobiles
-                    performantes, élégantes et orientées utilisateur
-                    avec une architecture moderne et scalable.
-
-                </p>
-
-                <!-- BUTTONS -->
-                <div class="hero-buttons">
-
-                    <a routerLink="/projects"
-                       class="btn-hero-primary">
-
-                        Voir mes projets
-
-                    </a>
-
-                    <a href="cv/Papa_Mbaye_CISSE_CV.pdf"
-                       download
-                       class="btn-hero-secondary">
-
-                        Télécharger CV
-
-                    </a>
-
-                </div>
-
-                <!-- STATS -->
-                <div class="hero-stats">
-
-                    <div class="stat-box">
-
-                        <h3>15+</h3>
-                        <span>Projets réalisés</span>
-
-                    </div>
-
-                    <div class="stat-box">
-
-                        <h3>4+</h3>
-                        <span>Technologies maîtrisées</span>
-
-                    </div>
-
-                    <div class="stat-box">
-
-                        <h3>100%</h3>
-                        <span>Responsive Design</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- RIGHT IMAGE -->
-            <div class="col-lg-5 text-center" data-aos="zoom-in">
-
-                <div class="hero-image-wrapper">
-
-                    <!-- BACK CIRCLE -->
-                    <div class="circle-animation"></div>
-
-                    <!-- CARD -->
-                    <div class="image-card">
-
-                        <img
-                            src="assets/images/obama2.jpg"
-                            alt="Papa Mbaye CISSE"
-                            class="hero-profile-img">
-
-                    </div>
-
-                    <!-- FLOATING CARDS -->
-
-                    <div class="floating-card card-one">
-
-                        <i class="bi bi-lightning-charge-fill"></i>
-
-                        <div>
-                            <h6>Applications Rapides</h6>
-                            <small>Optimisées & modernes</small>
-                        </div>
-
-                    </div>
-
-                    <div class="floating-card card-two">
-
-                        <i class="bi bi-shield-check"></i>
-
-                        <div>
-                            <h6>Architecture Robuste</h6>
-                            <small>API REST & sécurité</small>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+  <div class="container">
+    <div class="row align-items-center min-vh-100 py-5">
+      
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-7 hero-content">
+        <div class="badge-wrapper" data-aos="fade-down">
+          <span class="premium-badge">
+            <span class="pulse-dot"></span>
+            Développeur Fullstack Web & Mobile
+          </span>
         </div>
 
+        <h1 class="ultra-title" data-aos="fade-up" data-aos-delay="100">
+          Je transforme vos idées en
+          <span class="gradient-text">expériences digitales</span>
+          modernes & premium.
+        </h1>
+
+        <p class="ultra-subtitle" data-aos="fade-up" data-aos-delay="200">
+          Expert en <strong>Angular</strong>, <strong>React</strong>, <strong>Node.js</strong>, m<strong>Spingboot</strong>, <strong>Django</strong>, <strong>API REST</strong> et <strong>Flutter</strong>.
+          Je conçois des applications web & mobiles performantes, élégantes et orientées utilisateur
+          avec une architecture moderne et scalable.
+        </p>
+
+        <!-- BUTTONS -->
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+          <a routerLink="/projects" class="btn-primary">
+            <span>Voir mes projets</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+          <a href="cv/Papa_Mbaye_CISSE_CV.pdf" download class="btn-secondary">
+            <i class="bi bi-download"></i>
+            <span>Télécharger CV</span>
+          </a>
+        </div>
+
+        <!-- STATS -->
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+          <div class="stat-box">
+            <h3 class="counter" data-target="15">+ 10</h3>
+            <span>Projets réalisés</span>
+          </div>
+          <div class="stat-box">
+            <h3 class="counter" data-target="4">+ 8</h3>
+            <span>Technologies maîtrisées</span>
+          </div>
+          <div class="stat-box">
+            <h3>100%</h3>
+            <span>Responsive Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+        <div class="hero-visual">
+          <!-- Animated rings -->
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"></div>
+
+          <!-- Profile Card -->
+          <div class="profile-card">
+            <div class="profile-glow"></div>
+            <img src="assets/images/obama2.jpg" alt="Papa Mbaye CISSE" class="profile-img">
+            
+            <!-- Status badge -->
+            <div class="status-badge">
+              <span class="status-dot"></span>
+              Disponible
+            </div>
+          </div>
+
+          <!-- Floating Cards -->
+          <div class="float-card card-speed">
+            <div class="icon-box">
+              <i class="bi bi-lightning-charge-fill"></i>
+            </div>
+            <div>
+              <h6>Applications Rapides</h6>
+              <small>Optimisées & modernes</small>
+            </div>
+          </div>
+
+          <div class="float-card card-secure">
+            <div class="icon-box">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <div>
+              <h6>Architecture Robuste</h6>
+              <small>API REST & sécurité</small>
+            </div>
+          </div>
+
+          <div class="float-card card-code">
+            <div class="icon-box">
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <div>
+              <h6>Code Propre</h6>
+              <small>Scalable & maintenable</small>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
+  </div>
 </section>
-
-<!-- STATS COMPONENT -->
-<app-stats></app-stats>

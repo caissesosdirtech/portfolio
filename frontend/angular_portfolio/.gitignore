@@ -8,8 +8,10 @@
 
 # Node
 /node_modules
-npm-debug.log
-yarn-error.log
+npm-debug.log*
+yarn-error.log*
+yarn-debug.log*
+.pnpm-debug.log*
 
 # IDEs and editors
 .idea/
@@ -42,3 +44,13 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Optional / selon ton projet
+*.log
+.nyc_output
+.cache

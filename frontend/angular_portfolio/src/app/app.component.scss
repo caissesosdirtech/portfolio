@@ -2,3 +2,72 @@ body{
     margin:0;
     padding:0;
 }
+
+/* ======================
+   FOOTER
+====================== */
+.footer {
+  background: #0d0d0d;
+  color: #e0e0e0;
+  padding: 2.5rem 0 1.5rem;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+
+  span {
+    font-weight: 400;
+    color: #64ffda; // couleur accent (même que ta navbar)
+  }
+}
+
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.contact-item {
+  color: #ccd6f6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #64ffda;
+  }
+}
+
+.separator {
+  color: #555;
+}
+
+.footer-copyright {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .footer-contact {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .separator {
+    display: none;
+  }
+}
