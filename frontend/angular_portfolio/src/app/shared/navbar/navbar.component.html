@@ -1,137 +1,181 @@
-<nav class="navbar navbar-expand-lg fixed-top custom-navbar"
-     [class.shrink]="isScrolled">
+```html
+<nav
+  class="premium-navbar"
+  [class.scrolled]="isScrolled"
+>
 
-    <div class="container">
+  <div class="container navbar-inner">
 
-        <!-- LOGO -->
-        <a class="navbar-brand brand-logo" routerLink="/">
+    <!-- ================= LOGO ================= -->
+    <a
+      class="brand"
+      routerLink="/"
+      aria-label="Accueil - Papa Mbaye CISSE"
+    >
 
-            Papa Mbaye CISSE
+      <div class="brand-mark">
+        <span>PM</span>
+      </div>
 
-            <span>
-                Alias Obama
+      <div class="brand-text">
+
+        <span class="brand-name">
+          Papa Mbaye CISSE
+        </span>
+
+        <span class="brand-role">
+          Fullstack Developer
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <!-- ================= MOBILE BUTTON ================= -->
+    <button
+      class="mobile-toggle"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navMenu"
+      aria-controls="navMenu"
+      aria-label="Ouvrir le menu"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <!-- ================= MENU ================= -->
+    <div
+      class="collapse navbar-collapse"
+      id="navMenu"
+    >
+
+      <ul class="premium-menu">
+
+        <!-- ACCUEIL -->
+        <li>
+
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+
+            <span class="nav-icon">⌂</span>
+            <span>Accueil</span>
+
+          </a>
+
+        </li>
+
+
+        <!-- ABOUT -->
+        <li>
+
+          <a
+            routerLink="/about"
+            routerLinkActive="active"
+          >
+
+            <span class="nav-icon">✦</span>
+            <span>À propos</span>
+
+          </a>
+
+        </li>
+
+
+        <!-- SKILLS -->
+        <li>
+
+          <a
+            routerLink="/skills"
+            routerLinkActive="active"
+          >
+
+            <span class="nav-icon">⚡</span>
+            <span>Compétences</span>
+
+          </a>
+
+        </li>
+
+
+        <!-- PROJECTS -->
+        <li>
+
+          <a
+            routerLink="/projects"
+            routerLinkActive="active"
+          >
+
+            <span class="nav-icon">◈</span>
+            <span>Projets</span>
+
+          </a>
+
+        </li>
+
+
+        <!-- EXPERIENCE -->
+        <li>
+
+          <a
+            routerLink="/experience"
+            routerLinkActive="active"
+          >
+
+            <span class="nav-icon">◉</span>
+            <span>Expérience</span>
+
+          </a>
+
+        </li>
+
+
+        <!-- ACTIONS -->
+        <li class="nav-actions">
+
+          <a
+            class="contact-btn"
+            routerLink="/contact"
+          >
+
+            <span>Me contacter</span>
+
+            <span class="arrow">
+              →
             </span>
 
-        </a>
+          </a>
 
-        <!-- TOGGLER MOBILE -->
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navMenu">
 
-            <span class="navbar-toggler-icon"></span>
+          <a
+            class="cv-btn"
+            href="assets/cv/Papa_Mbaye_CISSE_CV.pdf"
+            download="Papa_Mbaye_CISSE_CV.pdf"
+          >
 
-        </button>
+            <span class="cv-icon">
+              ↓
+            </span>
 
-        <!-- MENU -->
-        <div class="collapse navbar-collapse" id="navMenu">
+            CV
 
-            <ul class="navbar-nav ms-auto align-items-lg-center gap-3">
+          </a>
 
-                <!-- ACCUEIL -->
-                <li class="nav-item">
+        </li>
 
-                    <a
-                        class="nav-link nav-anim"
-                        routerLink="/"
-                        routerLinkActive="active-link"
-                        [routerLinkActiveOptions]="{ exact: true }">
-
-                        Accueil
-
-                    </a>
-
-                </li>
-
-                <!-- ABOUT -->
-                <li class="nav-item">
-
-                    <a
-                        class="nav-link nav-anim"
-                        routerLink="/about"
-                        routerLinkActive="active-link">
-
-                        À propos
-
-                    </a>
-
-                </li>
-
-                <!-- SKILLS -->
-                <li class="nav-item">
-
-                    <a
-                        class="nav-link nav-anim"
-                        routerLink="/skills"
-                        routerLinkActive="active-link">
-
-                        Compétences
-
-                    </a>
-
-                </li>
-
-                <!-- PROJECTS -->
-                <li class="nav-item">
-
-                    <a
-                        class="nav-link nav-anim"
-                        routerLink="/projects"
-                        routerLinkActive="active-link">
-
-                        Projets
-
-                    </a>
-
-                </li>
-
-                <!-- EXPERIENCE -->
-                <li class="nav-item">
-
-                    <a
-                        class="nav-link nav-anim"
-                        routerLink="/experience"
-                        routerLinkActive="active-link">
-
-                        Expérience
-
-                    </a>
-
-                </li>
-
-                <!-- CONTACT -->
-                <li class="nav-item ms-lg-2">
-
-                    <a
-                        class="btn btn-premium"
-                        routerLink="/contact">
-
-                        Contact
-
-                    </a>
-
-                </li>
-
-                <!-- CV -->
-                <li class="nav-item">
-
-                    <a
-                        class="btn btn-cv"
-                        href="assets/cv/Papa_Mbaye_CISSE_CV.pdf"
-                        download="Papa_Mbaye_CISSE_CV.pdf">
-
-                        Télécharger CV
-
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </div>
+      </ul>
 
     </div>
 
+  </div>
+
 </nav>
+```
