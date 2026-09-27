@@ -1,171 +1,115 @@
-<nav
-  class="premium-navbar"
-  [class.scrolled]="isScrolled"
->
+```html
+<nav class="premium-navbar" [class.scrolled]="isScrolled">
 
-  <div class="container navbar-inner">
+  <div class="navbar-inner">
 
-    <!-- ================= LOGO ================= -->
-    <a
-      class="brand"
-      routerLink="/"
-      aria-label="Accueil - Papa Mbaye CISSE"
-    >
+    <!-- LOGO -->
+    <a class="brand" routerLink="/">
 
       <div class="brand-mark">
-        <span>PM</span>
+        PM
       </div>
 
       <div class="brand-text">
-
         <span class="brand-name">
           Papa Mbaye CISSE
         </span>
 
         <span class="brand-role">
-          Fullstack Developer
+          FULLSTACK DEVELOPER
         </span>
-
       </div>
 
     </a>
 
 
-    <!-- ================= MOBILE BUTTON ================= -->
+    <!-- BOUTON MOBILE -->
     <button
       class="mobile-toggle"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navMenu"
-      aria-controls="navMenu"
-      aria-label="Ouvrir le menu"
+      (click)="menuOpen = !menuOpen"
+      [class.open]="menuOpen"
+      aria-label="Menu"
     >
-
       <span></span>
       <span></span>
       <span></span>
-
     </button>
 
 
-    <!-- ================= MENU ================= -->
-    <div
-      class="collapse navbar-collapse"
-      id="navMenu"
-    >
+    <!-- MENU -->
+    <div class="navbar-menu" [class.open]="menuOpen">
 
-      <ul class="premium-menu">
+      <ul>
 
-        <!-- ACCUEIL -->
         <li>
-
           <a
             routerLink="/"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
+            (click)="menuOpen = false"
           >
-
-            <span class="nav-icon">⌂</span>
             <span>Accueil</span>
-
           </a>
-
         </li>
 
-
-        <!-- ABOUT -->
         <li>
-
           <a
             routerLink="/about"
             routerLinkActive="active"
+            (click)="menuOpen = false"
           >
-
-            <span class="nav-icon">✦</span>
             <span>À propos</span>
-
           </a>
-
         </li>
 
-
-        <!-- SKILLS -->
         <li>
-
           <a
             routerLink="/skills"
             routerLinkActive="active"
+            (click)="menuOpen = false"
           >
-
-            <span class="nav-icon">⚡</span>
             <span>Compétences</span>
-
           </a>
-
         </li>
 
-
-        <!-- PROJECTS -->
         <li>
-
           <a
             routerLink="/projects"
             routerLinkActive="active"
+            (click)="menuOpen = false"
           >
-
-            <span class="nav-icon">◈</span>
             <span>Projets</span>
-
           </a>
-
         </li>
 
-
-        <!-- EXPERIENCE -->
         <li>
-
           <a
             routerLink="/experience"
             routerLinkActive="active"
+            (click)="menuOpen = false"
           >
-
-            <span class="nav-icon">◉</span>
             <span>Expérience</span>
-
           </a>
-
         </li>
 
-
-        <!-- ACTIONS -->
-        <li class="nav-actions">
+        <li class="actions">
 
           <a
             class="contact-btn"
             routerLink="/contact"
+            (click)="menuOpen = false"
           >
-
-            <span>Me contacter</span>
-
-            <span class="arrow">
-              →
-            </span>
-
+            Me contacter
+            <span>→</span>
           </a>
-
 
           <a
             class="cv-btn"
             href="assets/cv/Papa_Mbaye_CISSE_CV.pdf"
             download="Papa_Mbaye_CISSE_CV.pdf"
           >
-
-            <span class="cv-icon">
-              ↓
-            </span>
-
-            CV
-
+            ↓ CV
           </a>
 
         </li>
@@ -177,4 +121,4 @@
   </div>
 
 </nav>
-
+```
