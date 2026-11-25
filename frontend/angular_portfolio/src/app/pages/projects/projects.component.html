@@ -55,6 +55,30 @@
             <h3>{{ p.titre }}</h3>
             <p class="muted">{{ p.description }}</p>
             <p class="mono project__stack">{{ p.stack.join(' · ') }}</p>
+            @if (p.demo) {
+              <div class="demo">
+                <div class="demo__title mono">Compte de démonstration</div>
+                <dl class="demo__creds mono">
+                  <dt>identifiant</dt>
+                  <dd>
+                    {{ p.demo.identifiant }}
+                    <button type="button" class="demo__copy" (click)="copier(p, p.demo.identifiant)"
+                            [attr.aria-label]="'Copier l\'identifiant de démo de ' + p.titre">
+                      {{ copie() === p.titre + p.demo.identifiant ? 'Copié' : 'Copier' }}
+                    </button>
+                  </dd>
+                  <dt>mot de passe</dt>
+                  <dd>
+                    {{ p.demo.motDePasse }}
+                    <button type="button" class="demo__copy" (click)="copier(p, p.demo.motDePasse)"
+                            [attr.aria-label]="'Copier le mot de passe de démo de ' + p.titre">
+                      {{ copie() === p.titre + p.demo.motDePasse ? 'Copié' : 'Copier' }}
+                    </button>
+                  </dd>
+                </dl>
+                <a [href]="p.demo.url" target="_blank" rel="noopener">Essayer la démo →</a>
+              </div>
+            }
             @if (p.lienSite || p.lienCode) {
               <div class="links">
                 @if (p.lienSite) { <a [href]="p.lienSite" target="_blank" rel="noopener">Voir le site →</a> }

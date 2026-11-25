@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 interface Projet {
   titre: string;
@@ -11,6 +11,12 @@ interface Projet {
   enLigne?: boolean;
   lienSite?: string;
   lienCode?: string;
+  /**
+   * Compte de démonstration affiché sur la carte.
+   * N'indiquez QUE les accès d'une version de démo avec des données fictives,
+   * jamais ceux du site d'un client avec ses vraies données.
+   */
+  demo?: { url: string; identifiant: string; motDePasse: string };
 }
 
 @Component({
@@ -20,6 +26,19 @@ interface Projet {
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
+  /** Nom du projet dont un accès de démo vient d'être copié (pour afficher « Copié »). */
+  readonly copie = signal<string | null>(null);
+
+  copier(p: Projet, texte: string): void {
+    navigator.clipboard?.writeText(texte).then(
+      () => {
+        this.copie.set(p.titre + texte);
+        setTimeout(() => this.copie.set(null), 1500);
+      },
+      () => {},
+    );
+  }
+
   /** Projet mis en avant en grand. */
   readonly vedette: Projet = {
     titre: 'Fast & Delicious',
@@ -43,6 +62,8 @@ export class ProjectsComponent {
       stack: ['Django', 'DRF', 'Flutter', 'PostgreSQL'],
       image: 'assets/images/parcemllesveto.png',
       lienSite: 'https://parcellesveto-thies.vet/',
+      // À remplir quand la version de démo existera, par exemple :
+      // demo: { url: 'https://demo.parcellesveto-thies.vet/', identifiant: 'demo', motDePasse: 'Demo2026' },
     },
     {
       titre: 'Gestion de flotte — suivi GPS',
@@ -65,8 +86,8 @@ export class ProjectsComponent {
       description:
         'Gestion des adhérents, cotisations et prêts, avec tableau de bord administratif et exports PDF / Excel.',
       stack: ['Django', 'Angular', 'API REST'],
-      image: 'assets/images/caisse-sociale-dirtech.jpg',
-      imageFond: '#08203a',
+      image: 'assets/images/caisse-sociale.jpg',
+      imageFond: '#ffffff',
     },
   ];
 }
