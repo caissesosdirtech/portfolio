@@ -72,6 +72,8 @@ export class ProjectsComponent {
         "Module Odoo pour suivre une flotte de véhicules : carte en direct, historique des trajets, " +
         "zones tracées par l'administrateur et alertes automatiques quand un véhicule sort de sa zone.",
       stack: ['Odoo 19', 'Python', 'OWL / JavaScript', 'Leaflet', 'Traccar', 'PostgreSQL'],
+      image: 'assets/images/gestion-flotte.jpg',
+      imageFond: '#ffffff',
     },
     {
       titre: 'Keur Khadim Boutique',
