@@ -39,7 +39,14 @@
       @for (p of projets; track p.titre) {
         <article class="card project">
           @if (p.image) {
-            <img class="project__img" [src]="p.image" [alt]="'Bannière ' + p.titre" loading="lazy" />
+            <img
+              class="project__img"
+              [class.project__img--logo]="p.imageFond"
+              [style.background-color]="p.imageFond"
+              [src]="p.image"
+              [alt]="(p.imageFond ? 'Logo ' : 'Bannière ') + p.titre"
+              loading="lazy"
+            />
           } @else {
             <div class="project__img project__img--placeholder mono" aria-hidden="true">&lt;{{ p.titre }} /&gt;</div>
           }

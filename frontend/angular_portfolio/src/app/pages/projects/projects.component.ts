@@ -6,6 +6,8 @@ interface Projet {
   description: string;
   stack: string[];
   image?: string;
+  /** Pour un logo : l'image est affichée en entier sur cette couleur de fond. */
+  imageFond?: string;
   enLigne?: boolean;
   lienSite?: string;
   lienCode?: string;
@@ -42,6 +44,14 @@ export class ProjectsComponent {
       image: 'assets/images/parcemllesveto.png',
     },
     {
+      titre: 'Gestion de flotte — suivi GPS',
+      secteur: 'Parc automobile · ERP Odoo',
+      description:
+        "Module Odoo pour suivre une flotte de véhicules : carte en direct, historique des trajets, " +
+        "zones tracées par l'administrateur et alertes automatiques quand un véhicule sort de sa zone.",
+      stack: ['Odoo 19', 'Python', 'OWL / JavaScript', 'Leaflet', 'Traccar', 'PostgreSQL'],
+    },
+    {
       titre: 'Keur Khadim Boutique',
       secteur: 'Commerce · Web',
       description: "Plateforme e-commerce et gestion centralisée d'une boutique de tissus, en gros et au détail.",
@@ -54,6 +64,8 @@ export class ProjectsComponent {
       description:
         'Gestion des adhérents, cotisations et prêts, avec tableau de bord administratif et exports PDF / Excel.',
       stack: ['Django', 'Angular', 'API REST'],
+      image: 'assets/images/caisse-sociale-dirtech.jpg',
+      imageFond: '#08203a',
     },
   ];
 }

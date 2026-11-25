@@ -12,6 +12,8 @@ export class SkillsComponent {
     { dossier: 'frontend/', outils: ['Angular', 'React', 'TypeScript', 'Tailwind CSS', 'HTML · CSS · JavaScript'] },
     { dossier: 'backend/', outils: ['Python · Django · DRF', 'Node.js', 'Spring Boot', 'API REST · WebSockets'] },
     { dossier: 'mobile/', outils: ['Flutter', 'React Native', 'Notifications push (Firebase)'] },
-    { dossier: 'data & ops/', outils: ['PostgreSQL', 'Supabase · Firebase', 'Git · GitHub · Docker', 'Railway · Cloudflare'] },
+    { dossier: 'erp/', outils: ['Odoo 19 (Community)', 'Modules sur mesure (Python · OWL)', "Vues, droits d'accès, tâches planifiées"] },
+    { dossier: 'data/', outils: ['PostgreSQL', 'SQLite', 'Supabase · Firebase'] },
+    { dossier: 'ops/', outils: ['Git · GitHub', 'Docker', 'Railway · Netlify · Cloudflare'] },
   ];
 }
