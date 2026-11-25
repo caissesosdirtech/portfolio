@@ -42,6 +42,7 @@ export class ProjectsComponent {
         "Gestion d'une clinique vétérinaire et de sa pharmacie : consultations, ordonnances PDF, ventes, caisse et stock.",
       stack: ['Django', 'DRF', 'Flutter', 'PostgreSQL'],
       image: 'assets/images/parcemllesveto.png',
+      lienSite: 'https://parcellesveto-thies.vet/',
     },
     {
       titre: 'Gestion de flotte — suivi GPS',
