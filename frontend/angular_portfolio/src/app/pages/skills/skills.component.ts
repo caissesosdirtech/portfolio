@@ -1,39 +1,17 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 
+/** Section « Stack » : technologies regroupées par domaine (sans pourcentages). */
 @Component({
   selector: 'app-skills',
-  imports: [],
+  standalone: true,
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
-export class SkillsComponent implements AfterViewInit {
-
-  ngAfterViewInit(): void {
-    this.initFilters();
-  }
-
-  private initFilters(): void {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const skillItems = document.querySelectorAll('.skill-item');
-
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // Active le bouton cliqué
-        filterButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const filter = (btn as HTMLElement).dataset['filter'];
-
-        skillItems.forEach(item => {
-          const category = (item as HTMLElement).dataset['category'];
-
-          if (filter === 'all' || category === filter) {
-            (item as HTMLElement).style.display = 'block';
-          } else {
-            (item as HTMLElement).style.display = 'none';
-          }
-        });
-      });
-    });
-  }
+export class SkillsComponent {
+  readonly groupes = [
+    { dossier: 'frontend/', outils: ['Angular', 'React', 'TypeScript', 'Tailwind CSS', 'HTML · CSS · JavaScript'] },
+    { dossier: 'backend/', outils: ['Python · Django · DRF', 'Node.js', 'Spring Boot', 'API REST · WebSockets'] },
+    { dossier: 'mobile/', outils: ['Flutter', 'React Native', 'Notifications push (Firebase)'] },
+    { dossier: 'data & ops/', outils: ['PostgreSQL', 'Supabase · Firebase', 'Git · GitHub · Docker', 'Railway · Cloudflare'] },
+  ];
 }

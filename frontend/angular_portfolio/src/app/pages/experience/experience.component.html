@@ -1,121 +1,20 @@
-<section class="experience-section">
+<section id="parcours" class="section">
+  <div class="container">
+    <p class="eyebrow">// 04 — parcours</p>
+    <h2 class="section-title mono">git log --parcours</h2>
+    <p class="section-lead">Plus de dix ans entre développement d'applications et administration de systèmes.</p>
 
-    <div class="container">
-
-        <!-- TITRE -->
-        <div class="text-center mb-5">
-
-            <h2 class="section-title">
-                Expérience Professionnelle
-            </h2>
-
-            <p class="section-subtitle">
-                Mon parcours académique et professionnel
-            </p>
-
-        </div>
-
-        <!-- TIMELINE -->
-        <div class="timeline">
-
-            <!-- ITEM -->
-            <div class="timeline-item" data-aos="fade-right">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-
-                    <span class="timeline-date">
-                        2014 - Aujourd’hui
-                    </span>
-
-                    <h4>
-                        Ministère de l’Urbanisme et de l’Habitat
-                    </h4>
-
-                    <p>
-                        Développement d’applications, gestion réseau,
-                        administration système et maintenance informatique.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- ITEM -->
-            <div class="timeline-item" data-aos="fade-left">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-
-                    <span class="timeline-date">
-                        2013
-                    </span>
-
-                    <h4>
-                        Stage professionnel
-                    </h4>
-
-                    <p>
-                        Mise en place du site web du ministère,
-                        administration réseau et base de données.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- ITEM -->
-            <div class="timeline-item" data-aos="fade-right">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-
-                    <span class="timeline-date">
-                        2012
-                    </span>
-
-                    <h4>
-                        Projet Java
-                    </h4>
-
-                    <p>
-                        Développement du site web du Lycée
-                        Serigne Ahmadou Ndack SECK de Thiès.
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- ITEM -->
-            <div class="timeline-item" data-aos="fade-left">
-
-                <div class="timeline-dot"></div>
-
-                <div class="timeline-content">
-
-                    <span class="timeline-date">
-                        2011
-                    </span>
-
-                    <h4>
-                        Université Alioune Diop de Bambey
-                    </h4>
-
-                    <p>
-                        Licence professionnelle en Développement
-                        et Administration d’Applications Web.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
+    <ol class="timeline">
+      @for (e of etapes; track e.date) {
+        <li class="timeline__item">
+          <span class="timeline__dot" [class.timeline__dot--current]="e.actuel" aria-hidden="true"></span>
+          <div>
+            <div class="timeline__date mono">{{ e.date }}</div>
+            <h3>{{ e.titre }}</h3>
+            <p>{{ e.texte }}</p>
+          </div>
+        </li>
+      }
+    </ol>
+  </div>
 </section>

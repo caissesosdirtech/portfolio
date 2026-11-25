@@ -1,14 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr" data-theme="dark">
 <head>
   <meta charset="utf-8">
-  <title>Papa Mbaye CISSE</title>
+  <title>Papa Mbaye CISSE — Développeur Fullstack Web &amp; Mobile</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta name="description" content="Développeur fullstack à Dakar : applications web et mobiles sur mesure (Angular, React, Django, Flutter), API et paiements Wave / Orange Money.">
+  <meta property="og:title" content="Papa Mbaye CISSE — Développeur Fullstack Web & Mobile">
+  <meta property="og:description" content="Applications web et mobiles sur mesure, de la conception à la mise en production.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a0d12">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- Applique le thème choisi avant l'affichage (évite un flash de la mauvaise couleur) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('portfolio-theme');
+        if (t !== 'dark' && t !== 'light') {
+          t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <app-root></app-root>

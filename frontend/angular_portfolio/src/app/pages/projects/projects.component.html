@@ -1,152 +1,62 @@
-<section class="projects-section py-5">
-    <div class="container">
-        <!-- HEADER -->
-        <div class="text-center mb-5">
-            <span class="section-badge">Portfolio</span>
-            <h2 class="projects-title">Mes Projets & Réalisations</h2>
-            <p class="projects-subtitle">
-                Découvrez quelques projets professionnels réalisés
-                avec Angular, Django, API REST et des technologies modernes.
-            </p>
+<section id="projets" class="section">
+  <div class="container">
+    <p class="eyebrow">// 02 — projets</p>
+    <h2 class="section-title">Réalisations récentes</h2>
+    <p class="section-lead">Des applications utilisées au quotidien par des restaurants, des cliniques et des commerces.</p>
+
+    <!-- Projet vedette -->
+    <article class="card featured">
+      <div class="featured__visual">
+        <img [src]="vedette.image" [alt]="'Logo ' + vedette.titre" loading="lazy" />
+      </div>
+      <div class="featured__body">
+        <div class="featured__meta">
+          @if (vedette.enLigne) {
+            <span class="badge-live mono">EN LIGNE</span>
+          }
+          <span class="mono muted">{{ vedette.secteur }}</span>
         </div>
-
-        <!-- PROJECTS GRID -->
-        <div class="row g-4">
-
-            <!-- PROJECT 1 : FAST AND DELICIOUS -->
-            <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/logo-fast-delicious.jpg" alt="Fast and Delicious">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span>Django</span>
-                            <span>DRF</span>
-                            <span>Channels</span>
-                            <span>React</span>
-                            <span>Flutter</span>
-                        </div>
-                        <h4>Fast and Delicious</h4>
-                        <p>Application web et mobile de restauration. Serveur central backend sous Django, Django REST Framework et Channels, site web sous React et appli mobile sous Flutter.</p>
-                        <div class="project-buttons">
-                            <a href="#" class="btn btn-info rounded-pill">Démo</a>
-                            <a href="#" class="btn btn-outline-light rounded-pill">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJECT 2 : PARCELLES VETO -->
-            <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/parcemllesveto.png" alt="parcellesveto">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span>Django</span>
-                            <span>Flutter</span>
-                            <span>API REST</span>
-                        </div>
-                        <h4>Parcelles Veto</h4>
-                        <p>Application de gestion complète pour clinique vétérinaire et sa pharmacie, associant une interface web Django et une application mobile Flutter.</p>
-                        <div class="project-buttons">
-                            <a href="#" class="btn btn-info rounded-pill">Démo</a>
-                            <a href="#" class="btn btn-outline-light rounded-pill">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJECT 3 : KEUR KHADIME BOUTIQUE -->
-            <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/khadimeboutique.png" alt="Khadimeboutique">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span>Django</span>
-                            <span>Python</span>
-                            <span>E-commerce</span>
-                        </div>
-                        <h4>Keur Khadime Boutique</h4>
-                        <p>Plateforme web e-commerce dédiée à la gestion centralisée d'une boutique de vente de tissus, développée sur mesure sous Django.</p>
-                        <div class="project-buttons">
-                            <a href="#" class="btn btn-info rounded-pill">Démo</a>
-                            <a href="#" class="btn btn-outline-light rounded-pill">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJECT 4 : GESTION SOCIALE -->
-            <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070" alt="Gestion Sociale">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span>Angular</span>
-                            <span>Django</span>
-                            <span>API REST</span>
-                        </div>
-                        <h4>Plateforme de Gestion Sociale</h4>
-                        <p>Application complète de gestion des adhérents, cotisations, prêts et dashboard administratif.</p>
-                        <div class="project-buttons">
-                            <a href="#" class="btn btn-info rounded-pill">Démo</a>
-                            <a href="#" class="btn btn-outline-light rounded-pill">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJECT 5 : PORTFOLIO PREMIUM -->
-            <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070" alt="Portfolio">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span>Angular</span>
-                            <span>Bootstrap</span>
-                            <span>UI/UX</span>
-                        </div>
-                        <h4>Portfolio Premium</h4>
-                        <p>Portfolio moderne avec animations, responsive design et architecture professionnelle.</p>
-                        <div class="project-buttons">
-                            <a href="#" class="btn btn-info rounded-pill">Démo</a>
-                            <a href="#" class="btn btn-outline-light rounded-pill">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROJECT 6 : SYSTÈME DE RÉCLAMATIONS -->
-            <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070" alt="Réclamations">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span>Django</span>
-                            <span>Python</span>
-                            <span>Security</span>
-                        </div>
-                        <h4>Système de Réclamations</h4>
-                        <p>Plateforme de suivi des réclamations avec authentification et gestion des statuts.</p>
-                        <div class="project-buttons">
-                            <a href="#" class="btn btn-info rounded-pill">Démo</a>
-                            <a href="#" class="btn btn-outline-light rounded-pill">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <h3>{{ vedette.titre }}</h3>
+        <p class="muted">{{ vedette.description }}</p>
+        <div class="tags">
+          @for (t of vedette.stack; track t) {
+            <span class="tag">{{ t }}</span>
+          }
         </div>
+        <div class="links">
+          @if (vedette.lienSite) {
+            <a [href]="vedette.lienSite" target="_blank" rel="noopener">Voir le site →</a>
+          }
+          @if (vedette.lienCode) {
+            <a [href]="vedette.lienCode" target="_blank" rel="noopener" class="link-plain">Code source →</a>
+          }
+        </div>
+      </div>
+    </article>
+
+    <!-- Autres projets -->
+    <div class="projects">
+      @for (p of projets; track p.titre) {
+        <article class="card project">
+          @if (p.image) {
+            <img class="project__img" [src]="p.image" [alt]="'Bannière ' + p.titre" loading="lazy" />
+          } @else {
+            <div class="project__img project__img--placeholder mono" aria-hidden="true">&lt;{{ p.titre }} /&gt;</div>
+          }
+          <div class="project__body">
+            <span class="mono muted small">{{ p.secteur }}</span>
+            <h3>{{ p.titre }}</h3>
+            <p class="muted">{{ p.description }}</p>
+            <p class="mono project__stack">{{ p.stack.join(' · ') }}</p>
+            @if (p.lienSite || p.lienCode) {
+              <div class="links">
+                @if (p.lienSite) { <a [href]="p.lienSite" target="_blank" rel="noopener">Voir le site →</a> }
+                @if (p.lienCode) { <a [href]="p.lienCode" target="_blank" rel="noopener" class="link-plain">Code →</a> }
+              </div>
+            }
+          </div>
+        </article>
+      }
     </div>
+  </div>
 </section>

@@ -1,0 +1,22 @@
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.service {
+  padding: 26px;
+
+  svg {
+    color: var(--accent);
+  }
+  h3 {
+    margin: 16px 0 8px;
+    font-size: 19px;
+  }
+  p {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--muted);
+  }
+}

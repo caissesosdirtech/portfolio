@@ -1,227 +1,66 @@
-<section class="contact-section">
+<section id="contact" class="section section--alt">
+  <div class="container contact">
+    <div class="contact__intro">
+      <p class="eyebrow">// 05 — contact</p>
+      <h2 class="section-title">Un projet en tête ? Parlons-en.</h2>
+      <p class="contact__lead">Décrivez votre besoin : je vous réponds avec une proposition de solution et un devis.</p>
 
-    <!-- BACKGROUND -->
-    <div class="contact-bg"></div>
-    <div class="overlay"></div>
+      <ul class="contact__infos">
+        <li><a [href]="'mailto:' + email">{{ email }}</a></li>
+        <li><a [href]="'tel:' + telephoneLien">{{ telephone }}</a></li>
+        <li class="contact__muted">{{ adresse }}</li>
+      </ul>
 
-    <!-- BLURS -->
-    <div class="blur blur-1"></div>
-    <div class="blur blur-2"></div>
-
-    <div class="container position-relative">
-
-        <!-- HEADER -->
-        <div class="text-center mb-5">
-
-            <span class="contact-badge">
-                Contact Professionnel
-            </span>
-
-            <h2 class="contact-title">
-                Discutons de votre
-                prochain projet digital
-            </h2>
-
-            <p class="contact-subtitle">
-                Développeur Web & Mobile spécialisé en Angular,
-                Django, API REST et Flutter.
-            </p>
-
+      @if (reseaux.length) {
+        <div class="contact__social mono">
+          @for (r of reseaux; track r.nom) {
+            <a [href]="r.url" target="_blank" rel="noopener">{{ r.nom }}</a>
+          }
         </div>
-
-        <div class="row g-5 align-items-stretch">
-
-            <!-- CONTACT INFOS -->
-            <div class="col-lg-4" data-aos="fade-right">
-
-                <div class="contact-info-box">
-
-                    <h3 class="info-title">
-                        Informations de contact
-                    </h3>
-
-                    <p class="info-text">
-                        Disponible pour vos projets web,
-                        mobiles et solutions digitales modernes.
-                    </p>
-
-                    <!-- EMAIL -->
-                    <div class="info-card">
-
-                        <div class="icon-box">
-                            <i class="bi bi-envelope-fill"></i>
-                        </div>
-
-                        <div>
-                            <span>Email</span>
-                            <h6>pmctech787@gmail.com</h6>
-                        </div>
-
-                    </div>
-
-                    <!-- PHONE -->
-                    <div class="info-card">
-
-                        <div class="icon-box">
-                            <i class="bi bi-telephone-fill"></i>
-                        </div>
-
-                        <div>
-                            <span>Téléphone</span>
-                            <h6>+221 77 547 00 87</h6>
-                        </div>
-
-                    </div>
-
-                    <!-- ADDRESS -->
-                    <div class="info-card">
-
-                        <div class="icon-box">
-                            <i class="bi bi-geo-alt-fill"></i>
-                        </div>
-
-                        <div>
-                            <span>Adresse</span>
-                            <h6>Medina rue 35 X 28 Dakar, Sénégal</h6>
-                        </div>
-
-                    </div>
-
-                    <!-- SOCIAL -->
-                    <div class="social-links">
-
-    <!-- TIKTOK -->
-    <a href="https://www.tiktok.com/@ndeye.astou.kane50"
-       target="_blank">
-
-        <i class="bi bi-tiktok"></i>
-
-    </a>
-
-    <!-- INSTAGRAM -->
-    <a href="https://www.instagram.com/papambayecisse?igsh=OXJqNXpuaTh3cGNr&utm_source=qr"
-       target="_blank">
-
-        <i class="bi bi-instagram"></i>
-
-    </a>
-
-    <!-- FACEBOOK -->
-    <a href="https://www.facebook.com/share/1D2LCbr65N/?mibextid=wwXIfr"
-       target="_blank">
-
-        <i class="bi bi-facebook"></i>
-
-    </a>
-
-</div>
-
-                </div>
-
-            </div>
-
-            <!-- FORM -->
-            <div class="col-lg-8" data-aos="fade-left">
-
-                <form class="contact-form" (ngSubmit)="send()">
-
-                    <div class="row g-4">
-
-                        <!-- NAME -->
-                        <div class="col-md-6">
-
-                            <div class="input-box">
-
-                                <label>Nom complet</label>
-
-                                <input
-                                    type="text"
-                                    [(ngModel)]="form.name"
-                                    name="name"
-                                    class="form-control"
-                                    placeholder="Votre nom"
-                                    required>
-
-                            </div>
-
-                        </div>
-
-                        <!-- EMAIL -->
-                        <div class="col-md-6">
-
-                            <div class="input-box">
-
-                                <label>Email</label>
-
-                                <input
-                                    type="email"
-                                    [(ngModel)]="form.email"
-                                    name="email"
-                                    class="form-control"
-                                    placeholder="Votre email"
-                                    required>
-
-                            </div>
-
-                        </div>
-
-                        <!-- SUBJECT -->
-                        <div class="col-12">
-
-                            <div class="input-box">
-
-                                <label>Sujet</label>
-
-                                <input
-                                    type="text"
-                                    [(ngModel)]="form.subject"
-                                    name="subject"
-                                    class="form-control"
-                                    placeholder="Sujet du message">
-
-                            </div>
-
-                        </div>
-
-                        <!-- MESSAGE -->
-                        <div class="col-12">
-
-                            <div class="input-box">
-
-                                <label>Message</label>
-
-                                <textarea
-                                    rows="6"
-                                    [(ngModel)]="form.message"
-                                    name="message"
-                                    class="form-control"
-                                    placeholder="Votre message..."
-                                    required></textarea>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- BUTTON -->
-                    <div class="mt-4">
-
-                        <button type="submit" class="btn-submit">
-
-                            <i class="bi bi-send-fill"></i>
-                            Envoyer le message
-
-                        </button>
-
-                    </div>
-
-                </form>
-
-            </div>
-
-        </div>
-
+      }
     </div>
 
+    <form class="card contact__form" #f="ngForm" (ngSubmit)="envoyer(f)" novalidate>
+      <div class="contact__row">
+        <label>
+          Nom
+          <input type="text" name="name" [(ngModel)]="form.name" required maxlength="100" placeholder="Votre nom" autocomplete="name" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" [(ngModel)]="form.email" required email placeholder="vous&#64;exemple.com" autocomplete="email" />
+        </label>
+      </div>
+
+      <label>
+        Type de projet
+        <select name="subject" [(ngModel)]="form.subject" required>
+          @for (t of typesProjet; track t) {
+            <option [value]="t">{{ t }}</option>
+          }
+        </select>
+      </label>
+
+      <label>
+        Votre projet
+        <textarea name="message" rows="5" [(ngModel)]="form.message" required placeholder="Application de gestion, site vitrine, appli mobile…"></textarea>
+      </label>
+
+      @if (f.submitted && f.invalid) {
+        <p class="contact__status contact__status--error" role="alert">Merci de remplir votre nom, un email valide et votre message.</p>
+      }
+      @if (etat() === 'ok') {
+        <p class="contact__status contact__status--ok" role="status">Message envoyé, merci ! Je vous réponds rapidement.</p>
+      }
+      @if (etat() === 'erreur') {
+        <p class="contact__status contact__status--error" role="alert">
+          L'envoi a échoué. Écrivez-moi directement à <a [href]="'mailto:' + email">{{ email }}</a>.
+        </p>
+      }
+
+      <button type="submit" class="btn btn--primary" [disabled]="etat() === 'envoi'">
+        {{ etat() === 'envoi' ? 'Envoi en cours…' : 'Envoyer le message' }}
+      </button>
+    </form>
+  </div>
 </section>

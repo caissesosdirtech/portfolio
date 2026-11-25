@@ -1,24 +1,31 @@
-import { Component, HostListener } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Component, HostListener, inject } from '@angular/core';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
+  readonly themeService = inject(ThemeService);
 
   isScrolled = false;
-  
-  // Ajout de la variable manquante pour le menu mobile
   menuOpen = false;
 
-  @HostListener('window:scroll', [])
-  onScroll(){
-    this.isScrolled = window.scrollY > 50;
+  readonly liens = [
+    { ancre: 'services', libelle: 'Services' },
+    { ancre: 'projets', libelle: 'Projets' },
+    { ancre: 'stack', libelle: 'Stack' },
+    { ancre: 'parcours', libelle: 'Parcours' },
+  ];
+
+  @HostListener('window:scroll')
+  onScroll(): void {
+    this.isScrolled = window.scrollY > 12;
   }
 
+  fermerMenu(): void {
+    this.menuOpen = false;
+  }
 }
